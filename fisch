@@ -1,0 +1,195 @@
+Configs = { 
+	["Version"] = "4.2", -- < String >
+	["Reduce Setting"] = { -- < Table >
+		["Reconnect"] = true, -- < Boolean >
+		["Lock Fps"] = 60, -- < Number >
+	}, 
+	["Fishing Setting"] = {  
+		["Perfect Catch"] = true, -- < Boolean >
+		["Main Position"] = CFrame.new(695.266968, 2130.24829, 16966.0801, 0.217116103, 7.77777629e-08, -0.976145804, 3.95693363e-08, 1, 8.84795099e-08, 0.976145804, -5.78357664e-08, 0.217116103), -- < CFrame > 
+		["Second Sea Main Position"] = CFrame.new(-498.954193, 78.7689972, 2141.73682, 0.996870279, -6.34856889e-10, -0.0790547952, 1.92319605e-09, 1, 1.62206479e-08, 0.0790547952, -1.63219198e-08, 0.996870279), -- < CFrame > 
+		["Farm Level"] = { -- < Table >
+			["When Have"] = "Ethereal Prism Rod", -- < String > 
+			["Level Position"] = CFrame.new(-13887.3965, -11048.6885, 350.285706, 0.948456287, 1.08180259e-07, 0.316907942, -1.06977055e-07, 1, -2.11960565e-08, -0.316907942, -1.37983438e-08, 0.948456287), -- < CFrame >
+		}, 
+		["Sell Setting"] = { -- < Table >
+			["Sell Event Fish"] = true, -- < Boolean >
+			["Sell Exotic Fish"] = true, -- < Boolean >
+			["Sell Mythical Fish"] = true, -- < Boolean >
+			["Sell Legendary"] = true, -- < Boolean >
+		}, 
+	}, 
+	["Enchant Setting"] = {
+		["Value"] = true, -- < Boolean >
+		["Minimum Money"] = 100000, -- < Number > 
+		["Type Enchant"] = { -- < Table >  CAN CUSTOM
+			["Aurora Rod"] = {"Hasty","Clever"}, 
+			["Poseidon Rod"] = { "Hasty"}, 
+			["Ethereal Prism Rod"] = {"Clever"}, 
+		}, 
+	},
+	["Ping Setting"] = { 
+		["Value"] = true, -- < Boolean > 
+		["Type"] = "Rejoin", -- < String > "Hop Server"
+		["Max Ping"] = 20000, -- < Number > 
+	}, 
+	["Nuke Setting"] = { 
+		["Value"] = true, -- < Boolean > 
+		["Type"] = "Normal Using", -- < String > or "Balance Minigame"
+	}, 
+	["BlackList Setting"] = { 
+		["Value"] = false, -- < Boolean > 
+		["Type"] = "Hop Server", -- < String > 
+		["Userid"] = { -- < Table > 
+			"1",
+			"2",
+		},
+	}, 
+	["Roblox Account Manager"] = {
+		["Value"] = false, -- < Boolean > 
+		["Type Description"] = [[
+		  Name : [NAME], Money : [MONEY], Level : [LEVEL], Rods Count [RODSCOUNT], Ready Rods : ```[ALLRODS],```
+       ]],
+	},
+	["Doing"] = { 
+		["Default Buying"] = { -- < Table > Note : CANT CUSTOM NAME : set true or false
+			["Carbon Rod"] = false, -- < Boolean > 
+			["Rapid Rod"] = true, -- < Boolean > 
+			["Aurora Rod"] = true, -- < Boolean > 
+			["Kraken Rod"] = false, -- < Boolean > 
+			["Poseidon Rod"] = true, -- < Boolean > 
+			["Ethereal Prism Rod"] = true, -- < Boolean > 
+		},
+		["Default Buying Second Sea"] = { -- < Table > Note : CANT CUSTOM NAME : set true or false
+			["Firefly Rod"] = true, -- < Boolean > 
+			["Blazebringer Rod"] = true, -- < Boolean > 
+			["Verdant Shear Rod"] = true, -- < Boolean > 
+		},
+		["Equip List"] = {  -- < Table > Note : CAN CUSTOM
+			"Carbon Rod",  -- 1
+			"Rapid Rod",  -- 2
+			"Aurora Rod", -- 3
+			"Poseidon Rod", -- 4
+			"Ethereal Prism Rod", -- 5
+			"Blazebringer Rod", -- 6 ( Second Sea )
+		},
+		["Custom Buying"] = { -- < Table >
+			["Rods"] = { -- < Table >
+				"Kings Rod",
+				"Midas Rod",
+				"Abyssal Specter Rod",
+				"Champions Rod",
+				"Depthseeker Rod",
+				"Long Rod",
+				"Phoenix Rod",
+				"Magnet Rod",
+				"Nocturnal Rod",
+				"Scurvy Rod",
+				"Lucky Rod",
+				"Trident Rod",
+				"Mythical Rod",
+				"Zeus Rod",
+				"Tempest Rod",
+				"Kraken Rod",
+				"Destiny Rod",
+			},
+			["Buying Custom Rod When"] = { 
+				["Level"] = 1000, -- < Number >
+			}, 
+		}, 
+		["Effect Luck"] = { 
+			["Allow Buying"] = true, -- < Boolean >
+			["Minimum Money"] = 50000, -- < Number >
+		}, 
+		["Aurora Borealis"] = { 
+			["Auto Using"] = true, -- < Boolean >
+			["Allow Purchase"] = true, -- < Boolean >
+			["Allow Purchase and Using Sundial Totem"] = true, -- < Boolean >
+			["Purchase Aurora Totem When"] = {  -- < Table >
+				["Money"] = 3500000, -- < Number >
+			}, 
+			["Purchase Sundial Totem When"] = {  -- < Table >
+				["Money"] = 3505000, -- < Number >
+			}, 
+		}, 
+		["Fishing Zone"] = { 
+			["Value"] = false, -- < Boolean >
+			["Zone List"] = { -- < Table > : All Zone Name : https://pastebin.com/raw/itGEkwnr
+				"Megalodon",
+				"Great Hammerhead Shark",
+				"Whale Shark",
+				"Great White Shark",
+				"Orcas",
+			},
+			["Doing When"] = { 
+				["Level"] = 1000, -- < Number >
+			},
+		},  
+		["Rod Of The Depths"] = { -- < Required > Bestiary Isonade : ( Auto Bestiary Isonade When Level 1000 )
+			["Value"] = true, -- < Boolean >
+			["Fishing Isonade When Level"] = 1000,
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number > 
+				["Money"] = 7500000, -- < Number >
+			}, 
+		}, 
+		["Leviathan's Fang Rod"] = { 
+			["Value"] = true, -- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 500, -- < Number >
+				["Money"] = 1200000, -- < Number >
+			}, 
+		}, 
+		["Submarine Quest"] = {  
+			["Value"] = true, -- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number >
+				["Money"] = 1000000, -- < Number >
+			}, 
+		}, 
+		["Rod Of The Forgotten Fang"] = { -- < Boolean > Required Lunar Thread
+			["Value"] = true,-- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number >
+				["Money"] = 5000000, -- < Number >
+			}, 
+		}, 
+		["Rod Of The Eternal King"] = {  -- < Boolean > Required Lunar Thread
+			["Value"] = true, -- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number >
+				["Money"] = 500000, -- < Number >
+			}, 
+		},
+		["Fungal Rod"] = { 
+			["Value"] = true, -- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number > 
+				["Money"] = 100000, -- < Number > 
+			}, 
+		}, 
+		["Magma Rod"] = { 
+			["Value"] = true, -- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number > 
+				["Money"] = 10000, -- < Number > 
+			}, 
+		}, 
+		["Heaven's Rod"] = { 
+			["Value"] = true,-- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number >
+				["Money"] = 4500000, -- < Number >
+			}, 
+		}, 
+		["Auto Second Sea"] = {
+			["Value"] = true,-- < Boolean >
+			["Doing When"] = {  -- < Table >
+				["Level"] = 1000, -- < Number > -- Required Level 250 ++( Not Recommend )
+				["Money"] = 50000000, -- < Number > 
+			}, 
+		}, 
+	}, 
+}
+script_key="DoIWTaFrRVaDkuiIuEOYgVxVOrPgdDIG";
+loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkiTeam/Normal-NewGenreation/refs/heads/main/Kaitun'))()
