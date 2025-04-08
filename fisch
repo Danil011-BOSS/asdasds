@@ -1,195 +1,194 @@
-Configs = { 
-	["Version"] = "4.2", -- < String >
-	["Reduce Setting"] = { -- < Table >
-		["Reconnect"] = true, -- < Boolean >
-		["Lock Fps"] = 60, -- < Number >
-	}, 
-	["Fishing Setting"] = {  
-		["Perfect Catch"] = true, -- < Boolean >
-		["Main Position"] = CFrame.new(695.266968, 2130.24829, 16966.0801, 0.217116103, 7.77777629e-08, -0.976145804, 3.95693363e-08, 1, 8.84795099e-08, 0.976145804, -5.78357664e-08, 0.217116103), -- < CFrame > 
-		["Second Sea Main Position"] = CFrame.new(-498.954193, 78.7689972, 2141.73682, 0.996870279, -6.34856889e-10, -0.0790547952, 1.92319605e-09, 1, 1.62206479e-08, 0.0790547952, -1.63219198e-08, 0.996870279), -- < CFrame > 
-		["Farm Level"] = { -- < Table >
-			["When Have"] = "Ethereal Prism Rod", -- < String > 
-			["Level Position"] = CFrame.new(-13887.3965, -11048.6885, 350.285706, 0.948456287, 1.08180259e-07, 0.316907942, -1.06977055e-07, 1, -2.11960565e-08, -0.316907942, -1.37983438e-08, 0.948456287), -- < CFrame >
-		}, 
-		["Sell Setting"] = { -- < Table >
-			["Sell Event Fish"] = true, -- < Boolean >
-			["Sell Exotic Fish"] = true, -- < Boolean >
-			["Sell Mythical Fish"] = true, -- < Boolean >
-			["Sell Legendary"] = true, -- < Boolean >
-		}, 
-	}, 
-	["Enchant Setting"] = {
-		["Value"] = true, -- < Boolean >
-		["Minimum Money"] = 100000, -- < Number > 
-		["Type Enchant"] = { -- < Table >  CAN CUSTOM
-			["Aurora Rod"] = {"Hasty","Clever"}, 
-			["Poseidon Rod"] = { "Hasty"}, 
-			["Ethereal Prism Rod"] = {"Clever"}, 
-		}, 
+_G.Configs = {
+	-- [[ setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)) ]] -- For Copy CFrame
+	Version = "20",
+	["Kai Aurora"] = false, -- < Boolean > Not Recommended Enabled For Kai Aurora Only
+	["Lock Plan"] = {
+		["Enabled"] = false, -- < Boolean > Enabled Lock Level 
+		["Lock Level"] = 500,  -- < Number > Lock Level 
 	},
-	["Ping Setting"] = { 
-		["Value"] = true, -- < Boolean > 
-		["Type"] = "Rejoin", -- < String > "Hop Server"
-		["Max Ping"] = 20000, -- < Number > 
-	}, 
-	["Nuke Setting"] = { 
-		["Value"] = true, -- < Boolean > 
-		["Type"] = "Normal Using", -- < String > or "Balance Minigame"
-	}, 
-	["BlackList Setting"] = { 
-		["Value"] = false, -- < Boolean > 
-		["Type"] = "Hop Server", -- < String > 
-		["Userid"] = { -- < Table > 
-			"1",
-			"2",
+	Setting = {
+		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
+		["Style Selected Object Shake"] = false, -- < Boolean > Not Recommended Enabled For Fix Shake Bug 
+		["Reducing Cpu Usage"] = {
+			["Black Screen"] = true, -- < Boolean > Auto Open / Close Black Screen
+			["Enabled"] = true, -- < Boolean > Using Cpu less 20
+			["FpsCap"] = {
+				["On BlackScreen"] = 15, -- < Number > Fps Lock
+				["Un BlackScreen"] = 90 -- < Number > Fps Lock
+			}
 		},
+		["Position Farming"] = {
+			["Main Position"] = CFrame.new(706.767822, 2131.87769, 16977.5645, 0.97345984, -6.38923003e-09, -0.22885792, -1.07132925e-08, 1, -7.34874703e-08, 0.22885792, 7.39889217e-08, 0.97345984), -- < CFrame > Main Position Fishing / Farm Money
+			["Level Position"] = CFrame.new(-14041.0762, -11043.7305, 55.8451042, 0.043619331, -8.40611669e-09, -0.999048233, 2.12796536e-09, 1, -8.32121572e-09, 0.999048233, -1.76297421e-09, 0.043619331), -- < CFrame > Main Position For Farm Level
+			["Max Level Position"] = CFrame.new(-4226.49854, -1003.57288, 2154.04028, 0.898783267, -1.37496379e-08, 0.438393205, 4.81961777e-08, 1, -6.74469405e-08, -0.438393205, 8.17490573e-08, 0.898783267),  -- < CFrame > Main Position For Farm Fish / Max Level Fishing
+			["Second Sea Position"] = CFrame.new(-431.880188, 79.1274261, -404.401276, -0.99026686, -4.67596237e-08, -0.139181569, -4.34084519e-08, 1, -2.71132965e-08, 0.139181569, -2.08077431e-08, -0.99026686),
+			["Security Fishing"] = {
+				["Enabled"] = true, -- < Boolean > Enabled For Multiply CFrame
+				["CFrame Multiply"] = CFrame.new(0, -20, 0), -- < CFrame > Multiply CFrame 
+				["View Bobber"] = true,
+				["Security For"] = {
+					["Main Position"] = true,
+					["Level Position"] = true,
+					["Max Level Position"] = true,
+					["Second Sea Position"] = true
+				},
+			},
+			["Logic Position"] = {
+				["Enabled"] = false,
+				["Logic Work Status"] = {"Level", "Max Level"}, -- < Table > Level, Max Level, Main : Choose For This Logic Working
+				["Day Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Day Time
+				["Night Time"] = CFrame.new(), -- < CFrame > Custom CFrame In Night Time
+				["Has Aurora Borealis"] = CFrame.new() -- < CFrame > Custom CFrame For Aurora Borealis
+			}
+		},
+		["Serverping"] = {
+			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
+			["MaxPing"] = 100000 -- < Number > MaxPing For Rejoin Server
+		},
+		["Aurora Borealis"] = {
+			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
+			["Full Aurora"] = true, -- < Boolean > Auto Using Sundial Totem
+			["Auto Buy"] = true, -- < Boolean > Auto Buy Aurora / Sundial
+			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
+		},
+		["Farm Level"] = {
+			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
+			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
+			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
+		},
+		["Sell Setting"] = {
+			["Sell Event Fish"] = true, -- < Boolean > Enabled Selling Event Fish
+			["Sell Exotic Fish"] = true, -- < Boolean > Enabled Selling Exotic Fish
+			["Sell Mythical Fish"] = true, -- < Boolean > Enabled Selling Mythical Fish
+			["Sell Legendary"] = true, -- < Boolean > Enabled Selling Legendary Fish
+			["Sell Secret"] = true, -- < Boolean > Enabled Selling Secret Fish
+		}
+	},
+	["Auto Enchant"] = {
+		["Lock Enchant"] = { -- < Table > Lock Enchant ["Rod Name"] = {"Name Enchant","Muti Enchant"}		
+			["Aurora Rod"] = {"Hasty"},
+			["Poseidon Rod"] = {"Hasty"},
+			["Ethereal Prism Rod"] = {"Clever"}
+		},
+		["Min Money To Enchant"] = 100000, -- < Number > Min Money To Enchant Rods
+		["Allow Enchant"] = false   -- < Boolean > Enabled Enchant
+	},
+	["Custom Equip"] = {
+		["Trier Rods Equip"] = {"Rapid Rod", "Trident Rod", "Aurora Rod", "Rod Of The Depths", "Kraken Rod", "Poseidon Rod", "No-Life Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod
+		["Trier Rods Equip [ Second Sea ]"]	 = {"Ethereal Prism Rod", "Verdant Shear Rod", "Blazebringer Rod", "Azure Of Lagoon", "Great Dreamer Rod"}
+	},
+	["Custom Buying"] = {
+		["Buying Rods"] = {
+			["Rods"] = {"Ethereal Prism Rod"}, -- < Table > Custom Rods Buying
+			["Ready Have Rods For Buy Rods"] = {"Rapid Rod", "Aurora Rod", "Ethereal Prism Rod"},  -- < Table > Ready Have Rods To Buying Custom Rods
+		}, 
+		["Second Sea Buying Rods"] = {"Verdant Shear Rod", "Blazebringer Rod", "Wildflower Rod", "Firefly Rod", "Frog Rod", "Azure Of Lagoon", "Free Spirit Rod", "Great Dreamer Rod"},
+		["Allow Buying"] = {
+			["Aurora Rod"] = true, -- < Boolean > Enabled For Buying
+			["Midas Rod"] = true, -- < Boolean > Enabled For Buying
+			["Destiny Rod"] = false, -- < Boolean > Enabled For Buying
+			["Poseidon Rod"] = true, -- < Boolean > Enabled For Buying
+			["Kraken Rod"] = false, -- < Boolean > Enabled For Buying
+			["Volcanic Rod"] = false, -- < Boolean > Enabled For Buying
+			["Challenger's Rod"] = false, -- < Boolean > Enabled For Buying
+			["Rod Of The Zenith"] = false, -- < Boolean > Enabled For Buying
+			['Ethereal Prism Rod'] = true, -- < Boolean > Enabled For Buying
+		},
+		["Buy Effect Luck"] = {
+			["Allow Buying"] = true,  -- < Boolean > Enabled Buying Luck Effect
+			["Min Money"] = 20000  -- < Number > Min Money For Buying Luck Effect
+		},
+		["Crystalized Rod"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Crystalized Rod
+			["Min Money Doing"] = 300000, -- < Number > Min Money For Crystalized Rod
+			["Rod In Glass Diamond"] = "Aurora Rod",  -- < String > Name Rod For Use In Puffer Pool
+			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Crystalized Rod
+		},
+		["Rod Of The Depths"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Rod Of The Depths
+			["Min Money Doing"] = 2000000, -- < Number > Min Money For Do Rod Of The Depths
+			["Rod In Vertigo"] = "Midas Rod", -- < String > Name Rod For Use In Vertigo Pool
+			["Rod In Whitepool"] = "Aurora Rod", -- < String > Name Rod For Use In Vertigo Pool
+			["Level Doing"] = 1000, -- < Number > Level For Starting Doing The Depths Rod
+		},
+		["Magma Rod"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Magma Rod
+			["Min Money Doing"] = 0, -- < Number > Min Money For Do Magma Rod
+			["Rod In Puffer Pool"] = "Aurora Rod",  -- < String > Name Rod For Use In Puffer Pool
+			["Level Doing"] = 500, -- < Number > Level For Starting Doing Magma Rod
+		},
+		["Fungal Rod"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Fungal Rod
+			["Min Money Doing"] = 0, -- < Number > Min Money For Do Fungal Rod
+			["Rod In Alligator"] = "Aurora Rod",  -- < String > Name Rod For Use In Alligator Pool
+			["Level Doing"] = 500, -- < Number > Level For Starting Doing Fungal Rod
+		},
+		["Heaven Rod"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Heaven Rod
+			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Heaven Rod
+			["Hopserver"] = false, -- < Boolean > Enabled Hopserver For Crystal Not Spawn
+			["Level Doing"] = 800, -- < Number > Level For Starting Doing Heaven Rod
+		},
+		["Leviathan's Fang Rod"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Leviathan's Fang Rod
+			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Leviathan's Fang Rod
+			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Leviathan's Fang Rod
+		},
+		["Rod of The Forgotten Fang"] = {
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Forgotten Fang Rod ( Req Lv 750 )
+			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Forgotten Fang Rod
+			["Using Rod"] = "Ethereal Prism Rod", -- < String > Name Rod For Use In Clam ( Change 1/650 Recommend Luckily )
+			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Forgotten Fang ( Level > 750 Only )
+		},
+		["Rod of The Eternal King"] = {
+			["Allow Doing"] = false, -- < Boolean > Enabled Do Eternal King Rod ( Req Lv 650 )
+			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Eternal King Rod
+			["Rod In Clam"] = "Ethereal Prism Rod", -- < String > Name Rod For Use In Clam ( Change 1/650 Recommend Luckily )
+			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Eternal King ( Level > 650 Only )
+		}
 	}, 
+	["Second Sea"] = {
+		["Enabled"] = true, -- < Boolean > Enabled For Go Second Sea
+		["Level Doing"] = 1000, -- < Number > Level For Doing Quest Secnod Sea
+		["Level Teleport Second Sea"] = 1000, -- < Number > Level For Go Second Sea
+		["Keepback"] = {
+			["Lucky Effect"] = 3,  -- < Number > Hour For Effect
+			["Aurora Totem"] = 10, -- < Number > Count Aurora Totem
+			["Sundial Totem"] = 20,  -- < Number > Count Sundial Totem
+		},
+		["Enchant Second Sea"] = {
+			["Enabled"] = true,
+			["Ready Have Rod"] = {"Verdant Shear Rod", "Blazebringer Rod", "Wildflower Rod", "Firefly Rod", "Frog Rod", "Azure Of Lagoon", "Free Spirit Rod", "Great Dreamer Rod"},
+			["Lock Enchant"] = { -- < Table > Lock Enchant ["Rod Name"] = {"Name Enchant","Muti Enchant"}		
+				["Verdant Shear Rod"] = {"Hasty"},
+				["Blazebringer Rod"] = {"Hasty"},
+				["Great Dreamer Rod"] = {"Clever"}
+			},
+		}
+	},
+	["After Max Level"] = {
+		["Enabled"] = true, -- < Boolean > Enabled After Max Level Function
+		["Live In Sea"] = 1, -- < Number > Index Sea After Max Level
+		["Min Money For Start After Max Level"] = 30000000, -- < Number > Min Money For Start After Max Level Function
+		["Fishing Zone"] = { -- < Table > Fishing Zone Select ( Special Zone )
+			"Megalodon",
+			"Orcas",
+			"Lovestorm",
+			"Whales"
+		},
+		["Buying Rods"] = {"Challenger's Rod", "Rod Of The Zenith", "Kraken Rod", "Trident Rod", "Destiny Rod", "Kings Rod", "Midas Rod", "Mythical Rod", "Tempest Rod", "Long Rod", "Fast Rod", "Steady Rod", "Fortune Rod", "Nocturnal Rod", "Magnet Rod", "Scurvy Rod", "Phoenix Rod", "Stone Rod", "Abyssal Specter Rod", "Champions Rod", "Depthseeker Rod"},
+		["Change Sell Setting"] = {
+			["Sell Event Fish"] = true, -- < Boolean > Enabled Selling Event Fish
+			["Sell Exotic Fish"] = true, -- < Boolean > Enabled Selling Exotic Fish
+			["Sell Mythical Fish"] = true, -- < Boolean > Enabled Selling Mythical Fish
+			["Sell Legendary"] = true, -- < Boolean > Enabled Selling Legendary Fish
+			["Sell Secret"] = true, -- < Boolean > Enabled Selling Secret Fish
+		},
+	},
 	["Roblox Account Manager"] = {
-		["Value"] = false, -- < Boolean > 
-		["Type Description"] = [[
-		  Name : [NAME], Money : [MONEY], Level : [LEVEL], Rods Count [RODSCOUNT], Ready Rods : ```[ALLRODS],```
-       ]],
+		["Enabled"] = true, -- < Boolean > Enabled For Set Ailas, Description
+		["BlackList Rods"] = {""} -- < Table > BlackList Rods Notshow Description
 	},
-	["Doing"] = { 
-		["Default Buying"] = { -- < Table > Note : CANT CUSTOM NAME : set true or false
-			["Carbon Rod"] = false, -- < Boolean > 
-			["Rapid Rod"] = true, -- < Boolean > 
-			["Aurora Rod"] = true, -- < Boolean > 
-			["Kraken Rod"] = false, -- < Boolean > 
-			["Poseidon Rod"] = true, -- < Boolean > 
-			["Ethereal Prism Rod"] = true, -- < Boolean > 
-		},
-		["Default Buying Second Sea"] = { -- < Table > Note : CANT CUSTOM NAME : set true or false
-			["Firefly Rod"] = true, -- < Boolean > 
-			["Blazebringer Rod"] = true, -- < Boolean > 
-			["Verdant Shear Rod"] = true, -- < Boolean > 
-		},
-		["Equip List"] = {  -- < Table > Note : CAN CUSTOM
-			"Carbon Rod",  -- 1
-			"Rapid Rod",  -- 2
-			"Aurora Rod", -- 3
-			"Poseidon Rod", -- 4
-			"Ethereal Prism Rod", -- 5
-			"Blazebringer Rod", -- 6 ( Second Sea )
-		},
-		["Custom Buying"] = { -- < Table >
-			["Rods"] = { -- < Table >
-				"Kings Rod",
-				"Midas Rod",
-				"Abyssal Specter Rod",
-				"Champions Rod",
-				"Depthseeker Rod",
-				"Long Rod",
-				"Phoenix Rod",
-				"Magnet Rod",
-				"Nocturnal Rod",
-				"Scurvy Rod",
-				"Lucky Rod",
-				"Trident Rod",
-				"Mythical Rod",
-				"Zeus Rod",
-				"Tempest Rod",
-				"Kraken Rod",
-				"Destiny Rod",
-			},
-			["Buying Custom Rod When"] = { 
-				["Level"] = 1000, -- < Number >
-			}, 
-		}, 
-		["Effect Luck"] = { 
-			["Allow Buying"] = true, -- < Boolean >
-			["Minimum Money"] = 50000, -- < Number >
-		}, 
-		["Aurora Borealis"] = { 
-			["Auto Using"] = true, -- < Boolean >
-			["Allow Purchase"] = true, -- < Boolean >
-			["Allow Purchase and Using Sundial Totem"] = true, -- < Boolean >
-			["Purchase Aurora Totem When"] = {  -- < Table >
-				["Money"] = 3500000, -- < Number >
-			}, 
-			["Purchase Sundial Totem When"] = {  -- < Table >
-				["Money"] = 3505000, -- < Number >
-			}, 
-		}, 
-		["Fishing Zone"] = { 
-			["Value"] = false, -- < Boolean >
-			["Zone List"] = { -- < Table > : All Zone Name : https://pastebin.com/raw/itGEkwnr
-				"Megalodon",
-				"Great Hammerhead Shark",
-				"Whale Shark",
-				"Great White Shark",
-				"Orcas",
-			},
-			["Doing When"] = { 
-				["Level"] = 1000, -- < Number >
-			},
-		},  
-		["Rod Of The Depths"] = { -- < Required > Bestiary Isonade : ( Auto Bestiary Isonade When Level 1000 )
-			["Value"] = true, -- < Boolean >
-			["Fishing Isonade When Level"] = 1000,
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number > 
-				["Money"] = 7500000, -- < Number >
-			}, 
-		}, 
-		["Leviathan's Fang Rod"] = { 
-			["Value"] = true, -- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 500, -- < Number >
-				["Money"] = 1200000, -- < Number >
-			}, 
-		}, 
-		["Submarine Quest"] = {  
-			["Value"] = true, -- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number >
-				["Money"] = 1000000, -- < Number >
-			}, 
-		}, 
-		["Rod Of The Forgotten Fang"] = { -- < Boolean > Required Lunar Thread
-			["Value"] = true,-- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number >
-				["Money"] = 5000000, -- < Number >
-			}, 
-		}, 
-		["Rod Of The Eternal King"] = {  -- < Boolean > Required Lunar Thread
-			["Value"] = true, -- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number >
-				["Money"] = 500000, -- < Number >
-			}, 
-		},
-		["Fungal Rod"] = { 
-			["Value"] = true, -- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number > 
-				["Money"] = 100000, -- < Number > 
-			}, 
-		}, 
-		["Magma Rod"] = { 
-			["Value"] = true, -- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number > 
-				["Money"] = 10000, -- < Number > 
-			}, 
-		}, 
-		["Heaven's Rod"] = { 
-			["Value"] = true,-- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number >
-				["Money"] = 4500000, -- < Number >
-			}, 
-		}, 
-		["Auto Second Sea"] = {
-			["Value"] = true,-- < Boolean >
-			["Doing When"] = {  -- < Table >
-				["Level"] = 1000, -- < Number > -- Required Level 250 ++( Not Recommend )
-				["Money"] = 50000000, -- < Number > 
-			}, 
-		}, 
-	}, 
 }
-script_key="DoIWTaFrRVaDkuiIuEOYgVxVOrPgdDIG";
-loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkiTeam/Normal-NewGenreation/refs/heads/main/Kaitun'))()
+getgenv().key = {63565,98776,42508,19036,68928,106074}
+loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
