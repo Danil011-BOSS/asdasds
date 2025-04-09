@@ -7,7 +7,7 @@ _G.Configs = {
 		["Lock Level"] = 500,  -- < Number > Lock Level 
 	},
 	Setting = {
-		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
+		["Perfect Catch"] = 95, -- < String > Style Perfect Catch [ Percent ]
 		["Style Selected Object Shake"] = false, -- < Boolean > Not Recommended Enabled For Fix Shake Bug 
 		["Reducing Cpu Usage"] = {
 			["Black Screen"] = true, -- < Boolean > Auto Open / Close Black Screen
@@ -66,8 +66,8 @@ _G.Configs = {
 	},
 	["Auto Enchant"] = {
 		["Lock Enchant"] = { -- < Table > Lock Enchant ["Rod Name"] = {"Name Enchant","Muti Enchant"}		
-			["Aurora Rod"] = {"Hasty"},
-			["Poseidon Rod"] = {"Hasty"},
+			["Aurora Rod"] = {"Clever"},
+			["Poseidon Rod"] = {"Clever"},
 			["Ethereal Prism Rod"] = {"Clever"}
 		},
 		["Min Money To Enchant"] = 100000, -- < Number > Min Money To Enchant Rods
@@ -86,12 +86,12 @@ _G.Configs = {
 		["Allow Buying"] = {
 			["Aurora Rod"] = true, -- < Boolean > Enabled For Buying
 			["Midas Rod"] = true, -- < Boolean > Enabled For Buying
-			["Destiny Rod"] = false, -- < Boolean > Enabled For Buying
+			["Destiny Rod"] = true, -- < Boolean > Enabled For Buying
 			["Poseidon Rod"] = true, -- < Boolean > Enabled For Buying
-			["Kraken Rod"] = false, -- < Boolean > Enabled For Buying
-			["Volcanic Rod"] = false, -- < Boolean > Enabled For Buying
-			["Challenger's Rod"] = false, -- < Boolean > Enabled For Buying
-			["Rod Of The Zenith"] = false, -- < Boolean > Enabled For Buying
+			["Kraken Rod"] = true, -- < Boolean > Enabled For Buying
+			["Volcanic Rod"] = true, -- < Boolean > Enabled For Buying
+			["Challenger's Rod"] = true, -- < Boolean > Enabled For Buying
+			["Rod Of The Zenith"] = true, -- < Boolean > Enabled For Buying
 			['Ethereal Prism Rod'] = true, -- < Boolean > Enabled For Buying
 		},
 		["Buy Effect Luck"] = {
@@ -141,7 +141,7 @@ _G.Configs = {
 			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Forgotten Fang ( Level > 750 Only )
 		},
 		["Rod of The Eternal King"] = {
-			["Allow Doing"] = false, -- < Boolean > Enabled Do Eternal King Rod ( Req Lv 650 )
+			["Allow Doing"] = true, -- < Boolean > Enabled Do Eternal King Rod ( Req Lv 650 )
 			["Min Money Doing"] = 3000000, -- < Number > Min Money For Do Eternal King Rod
 			["Rod In Clam"] = "Ethereal Prism Rod", -- < String > Name Rod For Use In Clam ( Change 1/650 Recommend Luckily )
 			["Level Doing"] = 1000, -- < Number > Level For Starting Doing Eternal King ( Level > 650 Only )
