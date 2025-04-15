@@ -3,8 +3,8 @@ _G.Configs = {
 	Version = "20",
 	["Kai Aurora"] = false, -- < Boolean > Not Recommended Enabled For Kai Aurora Only
 	["Lock Plan"] = {
-		["Enabled"] = false, -- < Boolean > Enabled Lock Level 
-		["Lock Level"] = 500,  -- < Number > Lock Level 
+		["Enabled"] = true, -- < Boolean > Enabled Lock Level 
+		["Lock Level"] = 2500,  -- < Number > Lock Level 
 	},
 	Setting = {
 		["Perfect Catch"] = 95, -- < String > Style Perfect Catch [ Percent ]
@@ -43,7 +43,7 @@ _G.Configs = {
 		},
 		["Serverping"] = {
 			["Enabled"] = true, -- < Boolean > MaxPing Rejoin Server
-			["MaxPing"] = 100000 -- < Number > MaxPing For Rejoin Server
+			["MaxPing"] = 1000 -- < Number > MaxPing For Rejoin Server
 		},
 		["Aurora Borealis"] = {
 			["Auto Using"] = true, -- < Boolean > Auto Using Aurora Totem
@@ -168,7 +168,7 @@ _G.Configs = {
 	},
 	["After Max Level"] = {
 		["Enabled"] = true, -- < Boolean > Enabled After Max Level Function
-		["Live In Sea"] = 1, -- < Number > Index Sea After Max Level
+		["Live In Sea"] = 2, -- < Number > Index Sea After Max Level
 		["Min Money For Start After Max Level"] = 30000000, -- < Number > Min Money For Start After Max Level Function
 		["Fishing Zone"] = { -- < Table > Fishing Zone Select ( Special Zone )
 			"Megalodon",
