@@ -1,6 +1,6 @@
 _G.Loader = {
 	["Version"] = "1",
-	["Lock Fps"] = 12, -- Recommend 10 - 15 Fps ++
+	["Lock Fps"] = 10, -- Recommend 10 - 15 Fps ++
 	["Allow Reconnect"] = true,
 	["Manager Fishing"] = {
 		["Fishing Location"] = {
