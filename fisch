@@ -148,7 +148,7 @@ _G.Configs = {
 		}
 	}, 
 	["Second Sea"] = {
-		["Enabled"] = true, -- < Boolean > Enabled For Go Second Sea
+		["Enabled"] = false, -- < Boolean > Enabled For Go Second Sea
 		["Level Doing"] = 1000, -- < Number > Level For Doing Quest Secnod Sea
 		["Level Teleport Second Sea"] = 1000, -- < Number > Level For Go Second Sea
 		["Keepback"] = {
