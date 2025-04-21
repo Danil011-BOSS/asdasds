@@ -7,7 +7,7 @@ _G.Configs = {
 		["Lock Level"] = 500,  -- < Number > Lock Level 
 	},
 	Setting = {
-		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
+		["Perfect Catch"] = 95, -- < String > Style Perfect Catch [ Percent ]
 		["Style Selected Object Shake"] = false, -- < Boolean > Not Recommended Enabled For Fix Shake Bug 
 		["Reducing Cpu Usage"] = {
 			["Black Screen"] = true, -- < Boolean > Auto Open / Close Black Screen
@@ -18,14 +18,15 @@ _G.Configs = {
 			}
 		},
 		["Position Farming"] = {
-			["Main Position"] = CFrame.new(706.767822, 2131.87769, 16977.5645, 0.97345984, -6.38923003e-09, -0.22885792, -1.07132925e-08, 1, -7.34874703e-08, 0.22885792, 7.39889217e-08, 0.97345984), -- < CFrame > Main Position Fishing / Farm Money
-			["Level Position"] = CFrame.new(-14041.0762, -11043.7305, 55.8451042, 0.043619331, -8.40611669e-09, -0.999048233, 2.12796536e-09, 1, -8.32121572e-09, 0.999048233, -1.76297421e-09, 0.043619331), -- < CFrame > Main Position For Farm Level
-			["Max Level Position"] = CFrame.new(-4226.49854, -1003.57288, 2154.04028, 0.898783267, -1.37496379e-08, 0.438393205, 4.81961777e-08, 1, -6.74469405e-08, -0.438393205, 8.17490573e-08, 0.898783267),  -- < CFrame > Main Position For Farm Fish / Max Level Fishing
+			["Main Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091), -- < CFrame > Main Position Fishing / Farm Money
+			["Level Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091), -- < CFrame > Main Position For Farm Level
+			["Max Level Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091),  -- < CFrame > Main Position For Farm Fish / Max Level Fishing
 			["Second Sea Position"] = CFrame.new(-431.880188, 79.1274261, -404.401276, -0.99026686, -4.67596237e-08, -0.139181569, -4.34084519e-08, 1, -2.71132965e-08, 0.139181569, -2.08077431e-08, -0.99026686),
 			["Security Fishing"] = {
 				["Enabled"] = true, -- < Boolean > Enabled For Multiply CFrame
-				["CFrame Multiply"] = CFrame.new(0, -20, 0), -- < CFrame > Multiply CFrame 
+				["CFrame Multiply"] = CFrame.new(0, 0, 0), -- < CFrame > Multiply CFrame 
 				["View Bobber"] = true,
+
 				["Security For"] = {
 					["Main Position"] = true,
 					["Level Position"] = true,
@@ -71,7 +72,7 @@ _G.Configs = {
 			["Ethereal Prism Rod"] = {"Clever"}
 		},
 		["Min Money To Enchant"] = 100000, -- < Number > Min Money To Enchant Rods
-		["Allow Enchant"] = false   -- < Boolean > Enabled Enchant
+		["Allow Enchant"] = true   -- < Boolean > Enabled Enchant
 	},
 	["Custom Equip"] = {
 		["Trier Rods Equip"] = {"Rapid Rod", "Trident Rod", "Aurora Rod", "Rod Of The Depths", "Kraken Rod", "Poseidon Rod", "No-Life Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod
@@ -86,10 +87,10 @@ _G.Configs = {
 		["Allow Buying"] = {
 			["Aurora Rod"] = true, -- < Boolean > Enabled For Buying
 			["Midas Rod"] = true, -- < Boolean > Enabled For Buying
-			["Destiny Rod"] = true, -- < Boolean > Enabled For Buying
+			["Destiny Rod"] = false, -- < Boolean > Enabled For Buying
 			["Poseidon Rod"] = true, -- < Boolean > Enabled For Buying
 			["Kraken Rod"] = true, -- < Boolean > Enabled For Buying
-			["Volcanic Rod"] = true, -- < Boolean > Enabled For Buying
+			["Volcanic Rod"] = false, -- < Boolean > Enabled For Buying
 			["Challenger's Rod"] = true, -- < Boolean > Enabled For Buying
 			["Rod Of The Zenith"] = true, -- < Boolean > Enabled For Buying
 			['Ethereal Prism Rod'] = true, -- < Boolean > Enabled For Buying
@@ -148,7 +149,7 @@ _G.Configs = {
 		}
 	}, 
 	["Second Sea"] = {
-		["Enabled"] = false, -- < Boolean > Enabled For Go Second Sea
+		["Enabled"] = true, -- < Boolean > Enabled For Go Second Sea
 		["Level Doing"] = 1000, -- < Number > Level For Doing Quest Secnod Sea
 		["Level Teleport Second Sea"] = 1000, -- < Number > Level For Go Second Sea
 		["Keepback"] = {
@@ -186,9 +187,7 @@ _G.Configs = {
 		},
 	},
 	["Roblox Account Manager"] = {
-		["Enabled"] = true, -- < Boolean > Enabled For Set Ailas, Description
+		["Enabled"] = false, -- < Boolean > Enabled For Set Ailas, Description
 		["BlackList Rods"] = {""} -- < Table > BlackList Rods Notshow Description
 	},
 }
-getgenv().key = {63565,98776,42508,19036,68928,106074}
-loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
