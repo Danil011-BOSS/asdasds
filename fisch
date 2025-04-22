@@ -7,7 +7,7 @@ _G.Configs = {
 		["Lock Level"] = 500,  -- < Number > Lock Level 
 	},
 	Setting = {
-		["Perfect Catch"] = 95, -- < String > Style Perfect Catch [ Percent ]
+		["Perfect Catch"] = 100, -- < String > Style Perfect Catch [ Percent ]
 		["Style Selected Object Shake"] = false, -- < Boolean > Not Recommended Enabled For Fix Shake Bug 
 		["Reducing Cpu Usage"] = {
 			["Black Screen"] = true, -- < Boolean > Auto Open / Close Black Screen
@@ -18,9 +18,9 @@ _G.Configs = {
 			}
 		},
 		["Position Farming"] = {
-			["Main Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091), -- < CFrame > Main Position Fishing / Farm Money
-			["Level Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091), -- < CFrame > Main Position For Farm Level
-			["Max Level Position"] = CFrame.new(-13966.5967, -11026.2324, -54.2116203, -0.446336091, -2.83942061e-08, -0.894865394, -3.4615308e-08, 1, -1.44649084e-08, 0.894865394, 2.45198297e-08, -0.446336091),  -- < CFrame > Main Position For Farm Fish / Max Level Fishing
+			["Main Position"] = CFrame.new(-14040.5791, -11043.7305, 50.701828, -0.107652597, 4.65498751e-08, -0.994188547, 3.47353755e-08, 1, 4.30607692e-08, 0.994188547, -2.98979117e-08, -0.107652597), -- < CFrame > Main Position Fishing / Farm Money
+			["Level Position"] = CFrame.new(-14040.5791, -11043.7305, 50.701828, -0.107652597, 4.65498751e-08, -0.994188547, 3.47353755e-08, 1, 4.30607692e-08, 0.994188547, -2.98979117e-08, -0.107652597), -- < CFrame > Main Position For Farm Level
+			["Max Level Position"] = CFrame.new(-14040.5791, -11043.7305, 50.701828, -0.107652597, 4.65498751e-08, -0.994188547, 3.47353755e-08, 1, 4.30607692e-08, 0.994188547, -2.98979117e-08, -0.107652597),  -- < CFrame > Main Position For Farm Fish / Max Level Fishing
 			["Second Sea Position"] = CFrame.new(-431.880188, 79.1274261, -404.401276, -0.99026686, -4.67596237e-08, -0.139181569, -4.34084519e-08, 1, -2.71132965e-08, 0.139181569, -2.08077431e-08, -0.99026686),
 			["Security Fishing"] = {
 				["Enabled"] = true, -- < Boolean > Enabled For Multiply CFrame
@@ -53,7 +53,7 @@ _G.Configs = {
 			["Min Money"] = 20000000 -- < Number > Min Money Buy Aurora / Sundial
 		},
 		["Farm Level"] = {
-			["Allow Farm Level"] = true,  -- < Boolean > Enabled Mode Farm Level
+			["Allow Farm Level"] = false,  -- < Boolean > Enabled Mode Farm Level
 			["Trier Rods [For Level]"] = {"Tempest Rod", "Ethereal Prism Rod"}, -- < Table > Table Equip Rod For Farm Level
 			["Min Money"] = 1000000 -- < Number > Min Money To Farm Level
 		},
@@ -87,10 +87,10 @@ _G.Configs = {
 		["Allow Buying"] = {
 			["Aurora Rod"] = true, -- < Boolean > Enabled For Buying
 			["Midas Rod"] = true, -- < Boolean > Enabled For Buying
-			["Destiny Rod"] = false, -- < Boolean > Enabled For Buying
+			["Destiny Rod"] = true, -- < Boolean > Enabled For Buying
 			["Poseidon Rod"] = true, -- < Boolean > Enabled For Buying
 			["Kraken Rod"] = true, -- < Boolean > Enabled For Buying
-			["Volcanic Rod"] = false, -- < Boolean > Enabled For Buying
+			["Volcanic Rod"] = true, -- < Boolean > Enabled For Buying
 			["Challenger's Rod"] = true, -- < Boolean > Enabled For Buying
 			["Rod Of The Zenith"] = true, -- < Boolean > Enabled For Buying
 			['Ethereal Prism Rod'] = true, -- < Boolean > Enabled For Buying
@@ -191,3 +191,5 @@ _G.Configs = {
 		["BlackList Rods"] = {""} -- < Table > BlackList Rods Notshow Description
 	},
 }
+getgenv().key = {63565,98776,42508,19036,68928,106074}
+loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/965cbb37d5a810609ee8cf51fba2ebea.lua'))()
